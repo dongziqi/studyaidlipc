@@ -3,7 +3,9 @@ package com.example.miqi.myapplication;
 
 // Declare any non-default types here with import statements
 
-interface IMyAidlInterface {
+import com.example.miqi.myapplication.Helloinfo;
+
+    interface IMyAidlInterface {
     /**
      * Demonstrates some basic types that you can use as parameters
      * and return values in AIDL.
@@ -12,5 +14,9 @@ interface IMyAidlInterface {
           //  double aDouble, String aString);
 
     void sayHelloToAC(String name);
+    void syaHelloInfo(in Helloinfo hi);
+    void syaHelloStoClient(out Helloinfo hi);
+    //void syaHelloDoubleTo(inout Helloinfo hi2);
+
 
 }

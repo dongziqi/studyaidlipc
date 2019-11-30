@@ -1,22 +1,18 @@
 package com.example.miqi.myapplication;
 
+
 import android.content.ComponentName;
 import android.content.Intent;
 import android.content.ServiceConnection;
-import android.net.wifi.WifiInfo;
-import android.net.wifi.WifiManager;
 import android.os.IBinder;
-import android.provider.Settings;
+
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.content.Context;
-
-import java.lang.reflect.Field;
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
+import com.example.miqi.myapplication.IMyAidlInterface;
 import com.example.miqi.myapplication.service.ServiceAidl;
 
 public class MainActivity extends AppCompatActivity {
@@ -36,6 +32,15 @@ public class MainActivity extends AppCompatActivity {
                 if(remote != null){
                     try {
                         remote.sayHelloToAC("dongziqi");
+                       Helloinfo hi = new Helloinfo("dongziqilala",2);
+                       remote.syaHelloInfo(hi);
+                        Log.d(TAG," MainActivity dongziqilala " + hi.getmHelloname());
+                        Helloinfo hi1 = new Helloinfo("cleint hello",5);
+                        remote.syaHelloStoClient(hi1);
+                        Log.d(TAG," MainActivity syaHelloStoClient " + hi1.getmHelloname());
+//                        Helloinfo hi2 = new Helloinfo("double cleint hello",8);
+//                        remote.syaHelloDoubleTo(hi2);
+//                        Log.d(TAG,"syaHelloDoubleTo " + hi2.getmHelloname());
 
                     }catch (android.os.RemoteException e){
                         Log.d(TAG,".android.os.RemoteException .." + e);

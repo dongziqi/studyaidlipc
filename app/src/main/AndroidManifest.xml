@@ -22,7 +22,8 @@
             </intent-filter>
         </activity>
 
-        <service android:name=".service.ServiceAidl">
+        <service android:name=".service.ServiceAidl"
+            android:process=":remote">
             <intent-filter>
                 <action android:name="android.intent.service.ServiceAidl" />
             </intent-filter>

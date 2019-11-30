@@ -6,6 +6,7 @@ import android.os.IBinder;
 import android.util.Log;
 
 import com.example.miqi.myapplication.IMyAidlInterface;
+import com.example.miqi.myapplication.Helloinfo;
 
 public class ServiceAidl extends Service {
     private final  static  String TAG = "dzq";
@@ -34,6 +35,32 @@ public class ServiceAidl extends Service {
         public void sayHelloToAC(String name) {
             Log.d(TAG,"service sayHelloToAC " + name);
         }
+
+        public  void syaHelloInfo(Helloinfo hi){
+
+                Log.d(TAG,"service Helloinfo name" + hi.getmHelloname());
+                Log.d(TAG,"service Helloinfo index" + hi.getMindex());
+                hi.setmHelloname("service hello");
+
+       }
+
+        public  void syaHelloStoClient(Helloinfo hi){
+
+            Log.d(TAG,"syaHelloStoClient Helloinfo name " + hi.getmHelloname());
+            Log.d(TAG,"syaHelloStoClient Helloinfo index " + hi.getMindex());
+            hi.setmHelloname("syaHelloStoClient hello");
+            hi.setMindex(3);
+
+
+
+        }
+//        public  void syaHelloDoubleTo(Helloinfo hi){
+//
+//            Log.d(TAG,"syaHelloDoubleTo Helloinfo name" + hi.getmHelloname());
+//            Log.d(TAG,"syaHelloDoubleTo Helloinfo index" + hi.getMindex());
+//            hi.setmHelloname("syaHelloDoubleTo  hello");
+//            hi.setMindex(4);
+//        }
 
     }
 
