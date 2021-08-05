@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.miqi.myapplication">
+        package="com.example.miqi.myapplication">
     <uses-permission android:name="android.permission.NETWORK_SETTINGS" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
@@ -23,7 +23,7 @@
         </activity>
 
         <service android:name=".service.ServiceAidl"
-            android:process=":remote">
+            android:process=":music">
             <intent-filter>
                 <action android:name="android.intent.service.ServiceAidl" />
             </intent-filter>

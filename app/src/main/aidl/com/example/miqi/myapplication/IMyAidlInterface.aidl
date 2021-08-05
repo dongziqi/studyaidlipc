@@ -14,6 +14,7 @@ import com.example.miqi.myapplication.Helloinfo;
           //  double aDouble, String aString);
 
     void sayHelloToAC(String name);
+    oneway  void sayHelloTocccc(int num);
     void syaHelloInfo(in Helloinfo hi);
     void syaHelloStoClient(out Helloinfo hi);
     //void syaHelloDoubleTo(inout Helloinfo hi2);

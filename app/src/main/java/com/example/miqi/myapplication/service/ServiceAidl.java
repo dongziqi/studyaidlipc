@@ -54,6 +54,17 @@ public class ServiceAidl extends Service {
 
 
         }
+        public  void sayHelloTocccc(int num){
+            Log.d(TAG,"sayHelloTocccc  num " + num);
+            Log.d(TAG, "thread " + android.os.Process.myTid());
+            try {
+                Thread.sleep(10000);
+            }catch (Exception e){
+
+            }
+
+
+        }
 //        public  void syaHelloDoubleTo(Helloinfo hi){
 //
 //            Log.d(TAG,"syaHelloDoubleTo Helloinfo name" + hi.getmHelloname());
